@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velocity Rush</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">Velocity Rush</div>
+        <div class="hud">
+          <div class="hud-box">
+            <span>Score</span>
+            <strong id="scoreValue">0</strong>
+          </div>
+          <div class="hud-box">
+            <span>Best</span>
+            <strong id="bestValue">0</strong>
+          </div>
+          <div class="hud-box">
+            <span>Speed</span>
+            <strong id="speedValue">1x</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="game-wrap">
+        <canvas id="gameCanvas" width="420" height="720"></canvas>
+
+        <div id="startOverlay" class="overlay visible">
+          <div class="panel">
+            <p class="eyebrow">NEON RUNNER</p>
+            <h1>Velocity Rush</h1>
+            <p>
+              Dodge barriers, slide under signs, and keep the streak alive.
+            </p>
+            <button id="startBtn" class="primary-btn">Start Run</button>
+          </div>
+        </div>
+
+        <div id="gameOverOverlay" class="overlay hidden">
+          <div class="panel">
+            <p class="eyebrow">RUN ENDED</p>
+            <h2>Game Over</h2>
+            <p id="finalScoreText">Score: 0</p>
+            <button id="restartBtn" class="primary-btn">Try Again</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn" data-action="left">◀</button>
+        <button class="control-btn" data-action="jump">Jump</button>
+        <button class="control-btn" data-action="slide">Slide</button>
+        <button class="control-btn" data-action="right">▶</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
